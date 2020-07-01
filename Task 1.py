@@ -54,7 +54,7 @@ print("Part - B ngram - Score: ",score_ngram)
 
 
 
-# Task 1 - c
+### Task 1 - c
 twenty_train = fetch_20newsgroups(subset='train', shuffle=True)
 
 tfidf_Vect = TfidfVectorizer(stop_words='english')

@@ -8,7 +8,7 @@ from nltk.stem import WordNetLemmatizer
 from nltk.stem import PorterStemmer
 from nltk import ne_chunk
 
-nltk.download()
+#nltk.download()
 
 
 html = requests.get("https://en.wikipedia.org/wiki/Google")
@@ -53,7 +53,7 @@ print('\n')
 trigrams = ngrams(wordTokens,3)
 print("Trigrams: ",list(trigrams))
 print('\n')
-lemmatized_output = ' '.join([lemmatizer.lemmatize(w) for w in wordTokens])
+lemmatized_output = ' '.join([lemmatizer.lemmatize(chr) for chr in wordTokens])
 print("Lemmatization:")
 print(lemmatized_output)
 print('\n')
