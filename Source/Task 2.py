@@ -39,12 +39,13 @@ file.write(finalString)
 file.close()
 
 ###################################################################
-ps = PorterStemmer()
 
-lemmatizer = WordNetLemmatizer()
+
+
 file = open('input.txt','r')
 text=file.read()
-
+ps = PorterStemmer()
+lemmatizer = WordNetLemmatizer()
 wordTokens =word_tokenize(text)
 sentenceTokens = sent_tokenize(text)
 print("Word tokens:",wordTokens)
@@ -61,12 +62,10 @@ stemmed_output = ' '.join([ps.stem(chr) for chr in wordTokens])
 print("Stemming:")
 print(stemmed_output)
 print('\n\n')
-
 n_pos = nltk.pos_tag(wordTokens)
 print("Parts of Speech :")
 print(n_pos)
 print('\n\n\n')
-
 ner = ne_chunk(n_pos)
 print("Named Entity Recognition :", ner)
 print('\n')
